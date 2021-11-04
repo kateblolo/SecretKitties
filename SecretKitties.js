@@ -2,6 +2,7 @@
 // @name           SecretKitty
 // @description    Un utilitaire pour faire parler les chats
 // @author         kateblolo
+// @namespace      faemoinzmvoiqnervmoiqernvominqervmoiqnervmoinqerv
 // @version        0.0.1
 // @match          https://www.jeuxvideo.com/forums/*
 // @match          https://m.jeuxvideo.com/forums/*
