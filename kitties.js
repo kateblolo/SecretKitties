@@ -146,3 +146,5 @@ function decrypt(){
         cancel();
     });
 })();
+
+main();
