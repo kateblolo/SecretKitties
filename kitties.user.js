@@ -114,7 +114,7 @@ function cancel(){
     chiffres.forEach(function(cipher){
         var c = cipher.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         message = message.replace(new RegExp(c, "g"), CryptoJS.AES.decrypt(cipher, "").toString(CryptoJS.enc.Utf8));
-        console.log(message);
+        message = message.replace(new RegExp(c, "g"), CryptoJS.AES.decrypt(cipher, "").toString(CryptoJS.enc.Utf8));
     });
     chiffres = [];
     $("#message_topic").val(message);
