@@ -101,7 +101,7 @@ function encrypt() {
     var message = $("#message_topic").val();
     var sels = document.getElementById("message_topic").selectionStart;
     var sele = document.getElementById("message_topic").selectionEnd;
-    var encrypted = CryptoJS.AES.encrypt(message.slice(sels, sele), "").toString();
+    var encrypted = CryptoJS.AES.encrypt(message.slice(sels, sele).replace(/\n/g, "~"), "").toString();
     var kitty_encrypted = [kitty, encrypted, kitty2].join('');
     $("#message_topic").val(message.slice(0, sels) + kitty_encrypted + message.slice(sele));
     chiffres.push(encrypted);
@@ -124,6 +124,9 @@ function add_smileys(message){
     for (let [sm, html] of Object.entries(smileys)){
         message = message.replace(new RegExp(sm,"g"), html);
     }
+    message = message.replace(/'''([^']+)'''/g, '<strong>$1</strong>');
+    message = message.replace(/''([^']+)''/g, '<em>$1</em>');
+    message = message.replace(/<code>(.+)<\/code>/g, '<pre class="pre-jv"><code class="code-jv">$1</code></pre>');
     return message;
 }
 
@@ -131,7 +134,7 @@ function decrypt(){
     $('img.img-stickers').each(function(){
         var message = $(this).attr('alt');
         message = CryptoJS.AES.decrypt(message.substring(12, message.length-7), "").toString(CryptoJS.enc.Utf8);
-        $(this).replaceWith("<p>" + add_smileys(message) + "</p>");
+        $(this).replaceWith("<p>" + add_smileys(message).replace(/~/g, "<br>") + "</p>");
     });
 }
 
