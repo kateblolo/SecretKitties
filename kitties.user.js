@@ -90,6 +90,7 @@ smileys[":ddb:"] = '<img data-code=":ddb:" src="//image.jeuxvideo.com/smileys_im
 smileys[":pave:"] = '<img data-code=":pave:" src="//image.jeuxvideo.com/smileys_img/pave.gif" width="51" height="43" alt="">';
 smileys[":objection:"] = '<img data-code=":objection:" src="//image.jeuxvideo.com/smileys_img/objection.gif" alt="" width="54" height="34">';
 smileys[":siffle:"] = '<img data-code=":siffle:" src="//image.jeuxvideo.com/smileys_img/siffle.gif" alt="" width="22" height="16">';
+smileys[":globe:"] = '<img src="https://image.jeuxvideo.com/smileys_img/6.gif" alt=":globe:" data-code=":globe:" title=":globe:" width="16" height="16">';
 
 var chiffres = [];
 
