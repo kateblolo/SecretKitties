@@ -3,7 +3,7 @@
 // @description    Un utilitaire pour faire parler les chats
 // @author         kateblolo
 // @namespace      https://www.jeuxvideo.com/
-// @version        0.0.1
+// @version        0.0.2
 // @match          https://www.jeuxvideo.com/forums/*
 // @match          https://m.jeuxvideo.com/forums/*
 // @require        https://code.jquery.com/jquery-3.6.0.min.js
